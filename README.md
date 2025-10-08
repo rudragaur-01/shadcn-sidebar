@@ -1,36 +1,64 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+## Shadcn Dashboard
 
-## Getting Started
+A modern, responsive dashboard built with Next.js 15, React 19, Tailwind CSS 4, and shadcn/ui components. Includes a collapsible sidebar, top navbar, charts, and dark mode.
 
-First, run the development server:
+![Dashboard Screenshot](public/dashboard.png)
 
+### Tech Stack
+- **Framework**: Next.js 15 (App Router)
+- **UI**: React 19, Tailwind CSS 4, shadcn/ui (Radix Primitives)
+- **Theming**: next-themes (light/dark/system)
+- **Charts**: Recharts
+- **Forms**: react-hook-form, zod
+
+### Features
+- **Collapsible sidebar** with smooth, GPU-accelerated transitions
+- **Top navbar** with theme toggle and menu actions
+- **Responsive layout** for desktop and mobile
+- **Accessible primitives** powered by Radix
+- **Reusable UI components** (buttons, dropdowns, inputs, sheets, tooltips, etc.)
+
+### Getting Started
+Prerequisites: Node.js 18+ and npm (or yarn/pnpm/bun)
+
+1) Install dependencies
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2) Start the dev server
+```bash
+npm run dev
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Visit `http://localhost:3000` in your browser.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Available Scripts
+```bash
+npm run dev     # Start Next.js (with Turbopack)
+npm run build   # Production build
+npm run start   # Start production server
+npm run lint    # Lint project
+```
 
-## Learn More
+### Project Structure (high level)
+- `app/` – App Router entry, pages, and layout
+- `components/` – UI and feature components
+- `components/ui/` – shadcn-style primitives (Radix-powered)
+- `public/` – static assets (e.g., `dashboard.png`)
+- `lib/` – utilities
 
-To learn more about Next.js, take a look at the following resources:
+### Styling & Theming
+- Tailwind CSS 4 with CSS variables for light/dark themes
+- `next-themes` for theme persistence and system preference
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Deployment
+- Recommended: Deploy to Vercel for optimal Next.js support
+- Build: `npm run build` then `npm run start`
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Credits
+- UI primitives and patterns inspired by shadcn/ui and Radix UI
+- Icons by lucide-react
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### License
+This project is provided as-is for educational and personal use. Add your preferred license if you plan to distribute.
